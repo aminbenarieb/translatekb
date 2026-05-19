@@ -1,0 +1,22 @@
+# Deliverfile — tells `fastlane deliver` where to find metadata + screenshots.
+# All actual content lives under Distribution/ so the public-facing structure
+# is obvious and version-controlled.
+
+app_identifier "com.aminbenarieb.translatekeyboard"
+
+metadata_path "../Distribution/metadata"
+screenshots_path "../Distribution/screenshots"
+
+# Per-language metadata files inside metadata/en-US/ are picked up by name:
+#   name.txt, subtitle.txt, description.txt, keywords.txt,
+#   promotional_text.txt, marketing_url.txt, privacy_url.txt, support_url.txt
+# review_notes.txt and demo_account.txt live one level up in metadata/.
+
+primary_category "PRODUCTIVITY"
+secondary_category "UTILITIES"
+copyright "2026 Amin Benarieb"
+
+# We deliberately collect nothing — answer the App Privacy questions in ASC
+# manually (the "No data collected" path) since the API surface for this is
+# narrow. The PrivacyInfo.xcprivacy manifest in the build is the source of
+# truth that ASC validates against.

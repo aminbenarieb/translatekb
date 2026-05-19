@@ -1,0 +1,37 @@
+TranslateKB is a custom keyboard extension that translates the user's draft text in place using Apple's on-device Translation framework (iOS 18+).
+
+WHY FULL ACCESS IS REQUIRED
+The Translation framework needs network access to download language packs on first use. iOS only grants network entitlements to keyboard extensions when the user enables "Allow Full Access". Without it, the Translation framework returns an error and the keyboard cannot translate.
+
+WHAT THE KEYBOARD DOES NOT DO
+• It does not log keystrokes.
+• It does not transmit user input to any server. All translation is on-device via Apple's framework. Language pack downloads go directly from the user's device to Apple's CDN; the keyboard does not see or proxy them.
+• It contains no analytics, no tracking, no third-party SDKs.
+• It does not store typed text beyond the active draft buffer required to perform the in-place replacement.
+
+HOW TO REVIEW (English path)
+1. Install the app and open it once so the extension registers.
+2. iOS Settings → General → Keyboard → Keyboards → Add New Keyboard → TranslateKB.
+3. Tap TranslateKB in the list and enable "Allow Full Access".
+4. Open Notes or Messages.
+5. Long-press 🌐 and switch to TranslateKB.
+6. In the keyboard's top bar, confirm the source flag is "Auto" or pick one explicitly. Default target is English.
+7. Type "Hola, como estas" and tap the Translate button in the top bar.
+8. The text is replaced inline with the English translation.
+
+HOW TO REVIEW (Russian path — exercises the layout switching)
+1. With TranslateKB active in Notes, tap the source flag chip → pick Russian.
+2. The keyboard switches to a Cyrillic ЙЦУКЕН layout.
+3. Type "Привет, как дела?" and tap Translate.
+4. The text is replaced with the English translation.
+
+PERFORMANCE NOTE
+The first translation per language pair may take a few seconds while the Translation framework downloads the pack from Apple. Subsequent translations on the same pair are near-instant. The main app's "Language packs" screen lets users pre-download packs.
+
+DEPENDENCIES
+• iOS 17.4 minimum (iOS 18+ strongly recommended).
+• No third-party SDKs.
+• Three bundles: container app, keyboard extension, shared framework.
+
+CONTACT
+amin.benarieb@gmail.com

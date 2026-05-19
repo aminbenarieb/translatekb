@@ -1,0 +1,1 @@
+translate,translator,translation,keyboard,language,russian,spanish,french,chinese,offline

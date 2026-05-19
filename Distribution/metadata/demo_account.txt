@@ -1,0 +1,1 @@
+No login required. The app has no accounts or backend.

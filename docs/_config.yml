@@ -1,0 +1,10 @@
+title: TranslateKB
+description: One-tap inline translator iOS keyboard
+theme: minima
+url: "https://aminbenarieb.github.io"
+baseurl: "/translatekb"
+
+show_excerpts: false
+header_pages:
+  - index.md
+  - privacy/index.md

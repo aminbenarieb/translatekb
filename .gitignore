@@ -1,0 +1,67 @@
+# Xcode
+build/
+DerivedData/
+*.xcuserstate
+*.xcuserdatad/
+xcuserdata/
+*.xcscmblueprint
+*.xccheckout
+*.moved-aside
+*.hmap
+*.ipa
+*.dSYM.zip
+*.dSYM
+*.xcarchive
+
+# Tuist
+.tuist-bin/
+.tuist-cache/
+.tuist-derived/
+Derived/
+*.xcodeproj
+*.xcworkspace
+!Tuist.swift
+!Project.swift
+
+# Swift
+.build/
+.swiftpm/
+Package.resolved
+.netrc
+
+# Fastlane
+fastlane/report.xml
+fastlane/Preview.html
+fastlane/screenshots/
+fastlane/test_output/
+fastlane/README.md
+
+# App Store Connect API keys — never commit
+*.p8
+AuthKey_*.p8
+private_keys/
+
+# Local env
+.env
+.env.local
+*.local
+
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Editors
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+
+# Distribution outputs
+Distribution/build/
+Distribution/exports/
+
+# Secrets accidentally placed under Distribution
+Distribution/**/*.p8
+Distribution/private_keys/

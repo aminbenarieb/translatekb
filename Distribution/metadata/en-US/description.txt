@@ -1,0 +1,29 @@
+Type, tap, translate. TranslateKB is a custom keyboard that replaces your draft with its translation — right inside WhatsApp, Telegram, Mail, Notes, or any text field. No switching apps. No copy-paste.
+
+Powered by Apple's on-device Translation framework. No accounts, no backend, no analytics, no data collection. Everything happens on your iPhone.
+
+SUPPORTED LANGUAGES
+English, Russian, Spanish, French, German, Italian, Portuguese, Chinese, Japanese, Korean, Arabic, Hindi, Turkish, Polish, Dutch, Ukrainian.
+
+HOW IT WORKS
+1. Open TranslateKB once to register the keyboard.
+2. iOS Settings → General → Keyboard → Keyboards → Add New Keyboard → TranslateKB.
+3. Tap TranslateKB in the list and enable "Allow Full Access".
+4. In any app, long-press the 🌐 globe to switch to TranslateKB.
+5. Type your message. Tap Translate. Your draft is replaced with its translation.
+
+KEYBOARD LAYOUTS
+The keyboard switches layout to match your selected source language:
+• ЙЦУКЕН for Russian and Ukrainian
+• QWERTY for English and other Latin-script languages
+
+TONE (preview)
+Pick from Neutral, Casual, Formal, Business, or Friendly. The architecture is in place; AI-powered tone rewriting ships in a future update.
+
+PRIVACY
+TranslateKB doesn't collect anything. Translations run on-device via Apple's Translation framework. Settings and usage count are stored only on your iPhone.
+
+REQUIREMENTS
+iOS 17.4 minimum. iOS 18 or later strongly recommended for the in-keyboard programmatic Translation API. The keyboard needs "Allow Full Access" so Apple's Translation framework can download language packs.
+
+This is a custom keyboard. iOS asks you to grant Full Access once. TranslateKB does not log keystrokes, does not store typed text beyond the active draft, and does not transmit anything to any server.
