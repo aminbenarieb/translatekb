@@ -11,12 +11,12 @@
 
 ## You — next steps
 See `Distribution/SHIP.md`. Summary:
-1. Create 2 App IDs + App Group in developer.apple.com (5 min)
-2. Create ASC record at appstoreconnect.apple.com (5 min)
-3. `tuist generate --open` → Xcode → Archive → Distribute → Upload (10 min)
-4. Copy-paste metadata from `Distribution/metadata/` into ASC web UI (15 min)
-5. Add yourself as TestFlight tester, smoke test on iPhone
-6. Submit for review
+1. Generate ASC API key (Admin role), set `ASC_KEY_ID` / `ASC_ISSUER_ID` / `APPLE_ID` env vars
+2. `bundle install`
+3. `bundle exec fastlane create_app` (creates ASC record + App IDs + App Group)
+4. `bundle exec fastlane sync_metadata && bundle exec fastlane sync_screenshots`
+5. `bundle exec fastlane beta` → install on iPhone via TestFlight → smoke test
+6. `bundle exec fastlane release` to submit for App Store review
 
 ## Manual blockers
 - `kk` and `tr` description need native-speaker review before public review submission. See `Distribution/metadata/LOCALIZATION_NOTES.md`.
