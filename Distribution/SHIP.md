@@ -1,31 +1,31 @@
 # Ship checklist
 
-Concise, manual flow. Estimated time: 45 min first time.
+Manual flow, ~30 min first time.
 
-## 1. Apple Developer portal (5 min)
-developer.apple.com/account → Identifiers
-- App ID: `com.aminbenarieb.translatekeyboard` (capability: App Groups)
-- App ID: `com.aminbenarieb.translatekeyboard.keyboard` (capability: App Groups)
-- App Group: `group.com.aminbenarieb.translatekeyboard`
-- Link both App IDs to the App Group.
-
-## 2. App Store Connect record (5 min)
+## 1. App Store Connect record (5 min)
 appstoreconnect.apple.com → My Apps → +
 - Name: **Yet Another Translate Keyboard**
 - Bundle ID: `com.aminbenarieb.translatekeyboard`
 - SKU: `yatk-ios`
 - Primary language: English (U.S.)
 
-## 3. Archive + upload via Xcode (10 min)
+## 2. Open the project (1 min)
 ```
 tuist generate --open
 ```
-In Xcode: device → **Any iOS Device (arm64)**, Product → Archive.
-Organizer → Distribute App → App Store Connect → Upload.
-Wait 5–20 min for ASC processing.
 
-## 4. Fill the App Store Connect listing (15 min)
-Copy-paste from `Distribution/metadata/` (per locale: en-US, ru-RU, kk, tr-TR):
+In Xcode: top-bar device selector → **Any iOS Device (arm64)**.
+Both targets already have "Automatically manage signing" on with team
+`5P8935L6RT` — Xcode creates the two App IDs and the App Group on the
+developer portal automatically during the first archive.
+
+## 3. Archive + upload (10 min)
+Menu → Product → **Archive**. Wait ~2 min.
+Organizer auto-opens → Distribute App → App Store Connect → Upload.
+Processing in ASC: 5–20 min.
+
+## 4. Fill the ASC listing (15 min)
+Copy-paste from `Distribution/metadata/` per locale (`en-US`, `ru-RU`, `kk`, `tr-TR`):
 
 | ASC field            | File                              |
 |----------------------|-----------------------------------|
@@ -42,29 +42,23 @@ Copy-paste from `Distribution/metadata/` (per locale: en-US, ru-RU, kk, tr-TR):
 | App Review Notes     | `metadata/review_notes.txt`       |
 
 Categories: Primary **Productivity**, Secondary **Utilities**.
-App Privacy: select **No data collected**.
+App Privacy: **No data collected**.
+Screenshots: drag from `Distribution/screenshots/en-US/iPhone-6.9/`.
 
-## 5. Screenshots (5 min)
-Upload from `Distribution/screenshots/en-US/iPhone-6.9/`:
-- `01-settings.png`
-- `02-onboarding.png`
+## 5. TestFlight (instant)
+TestFlight → Internal Testing → Create Group "Internal" → add yourself by Apple ID.
+TestFlight app on iPhone → install → enable keyboard in Settings → smoke test.
 
-Add more later from a TestFlight build on your iPhone.
-
-## 6. TestFlight beta (instant after processing)
-- TestFlight → Internal Testing → Create Group "Internal" → add yourself.
-- Open TestFlight on iPhone → install → enable keyboard in Settings → smoke test.
-
-## 7. Submit for App Store review
-After TestFlight smoke test:
-- App Store Connect → Prepare for Submission → select uploaded build → Submit.
-- Custom keyboard review: 24–72 h.
+## 6. Submit for review (after smoke test)
+Prepare for Submission → pick uploaded build → Submit. Custom keyboard review: 24–72 h.
 
 ---
 
-## What's needed from you
+**You do not need an ASC API key.** That's only for non-interactive
+automation (fastlane, scripts). You're going through the web UI manually.
+Skip it.
 
-| Item                                | Where you get it                                          |
-|-------------------------------------|------------------------------------------------------------|
-| Apple ID signed into Xcode          | Already configured for the team `5P8935L6RT`              |
-| `kk` and `tr` metadata native review | One Kazakh + one Turkish speaker — see `metadata/LOCALIZATION_NOTES.md` |
+**You do not need to create App IDs manually** in developer.apple.com.
+Xcode creates them when you Archive with automatic signing. Only step in
+the developer portal might be approving the App Group capability — Xcode
+prompts if needed.
