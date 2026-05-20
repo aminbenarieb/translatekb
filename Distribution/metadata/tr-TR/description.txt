@@ -1,0 +1,29 @@
+Yurtdışındaki ailenize her mesaj yazışınızda Google Translate ile WhatsApp arasında geçiş yapmayı bırakın.
+
+TranslateKB, iPhone için özel bir klavyedir. Yazın, «Translate»'e dokunun, mesajınız çevirisiyle yer değiştirsin — WhatsApp, Telegram, Mail veya metin alanı olan herhangi bir uygulamada. Uygulama değiştirme yok. Kopyala-yapıştır yok.
+
+Abonelik yok. 10 kullanımdan sonra ödeme duvarı yok. Reklam yok. Veri toplama yok.
+
+Çeviri, iPhone'unuzda Apple Translation çerçevesi ile yapılır. Mesajlarınız cihazınızdan asla çıkmaz.
+
+DİLLER
+İngilizce, Rusça, İspanyolca, Fransızca, Almanca, İtalyanca, Portekizce, Çince, Japonca, Korece, Arapça, Hintçe, Türkçe, Lehçe, Felemenkçe, Ukraynaca.
+
+KLAVYE DÜZENLERİ
+Rusça ve Ukraynaca için ЙЦУКЕН, İngilizce ve diğer Latin dilleri için QWERTY — seçilen kaynak diline göre otomatik geçer.
+
+NASIL BAŞLANIR
+1. TranslateKB'yi bir kez açın — klavye uzantısı kaydedilsin.
+2. iOS Ayarlar → Genel → Klavye → Klavyeler → Yeni Klavye Ekle → TranslateKB.
+3. Listedeki TranslateKB'ye dokunun ve «Tam Erişime İzin Ver»i açın (Apple'ın dil paketlerini indirmesi için gerekli).
+4. Herhangi bir uygulamada 🌐'ye uzun basın ve TranslateKB'ye geçin.
+5. Bir şey yazın. Üstteki Translate düğmesine dokunun. Taslağınız çevirisiyle yer değiştirir.
+
+GEREKLİLİKLER
+iOS 17.4 minimum, iOS 18+ önerilir.
+
+GİZLİLİK
+TranslateKB hiçbir şey toplamaz.
+
+DESTEK
+Almatı'da yapıldı. Açık kaynak: github.com/aminbenarieb/translatekb

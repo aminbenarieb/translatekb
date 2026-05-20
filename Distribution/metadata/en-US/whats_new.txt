@@ -1,0 +1,1 @@
+Initial release. Type, tap, translate inline — no app switching, no subscription, on-device.

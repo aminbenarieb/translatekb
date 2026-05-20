@@ -161,3 +161,58 @@ Adding cloud tone:
 2. Same wiring as above — one swap, no UI changes.
 
 No migrations needed: v1 ships with the same protocols v2 will use.
+
+## Voice input (v2)
+
+v0.2 adds a third optional protocol — `VoiceProvider` — that fits next to
+`TranslationProvider` and `ToneAdapter` in the pipeline. `TranslationPipeline`
+gains an optional `voiceProvider:` initializer parameter; when nil, the
+keyboard hides its mic button.
+
+```swift
+public protocol VoiceProvider: Sendable {
+    var identifier: String { get }
+    var displayName: String { get }
+    func isAvailable() async -> Bool
+    func supportedLanguages() async -> [Language]
+    func transcribe(audio: AudioBuffer, language: Language) async throws -> String
+}
+```
+
+v1 ships only `AppleSpeechVoiceProvider` (stubbed — `isAvailable()` returns
+false) and `MockVoiceProvider` (used by tests). The real Apple Speech-backed
+impl is v2 work — `SFSpeechRecognizer` is on-device since iOS 13, no
+per-minute cost, and supports the diaspora-corridor languages Apple
+Translation already covers.
+
+### Pipeline integration
+
+```swift
+let result = try await pipeline.processVoice(
+    audioBuffer,
+    from: .russian,
+    to: .english
+)
+// internally: voice.transcribe → text → provider.translate → adapter.adapt
+```
+
+The voice path **reuses** the rest of the pipeline. Tone adaptation works
+identically whether the input came from typing or speech. Same-language
+"polish me up" tone rewrites work for transcribed audio too — useful for
+"rewrite this dictation in a business tone".
+
+### Memory budget warning
+
+Apple Speech can stay under the 50MB extension limit for short utterances
+(<10s) on iOS 18+. Long-form transcription risks an OOM kill. Mic UI must
+enforce a max hold duration — probably 15s — and surface "Tap to stop"
+before that limit. Real on-device Whisper models would blow the limit; do
+not consider them for the extension.
+
+### Microphone permission
+
+Permission prompts from a keyboard extension are flaky — users frequently
+deny on first attempt because the prompt context isn't clear. Main app
+requests the permission first via `AVAudioSession.requestRecordPermission(_:)`
+and shows a contextual explainer. Only after that does the keyboard expose
+the mic button.

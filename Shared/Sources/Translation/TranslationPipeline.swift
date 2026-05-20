@@ -7,15 +7,52 @@ import os
 public final class TranslationPipeline: Sendable {
     private let provider: TranslationProvider
     private let toneAdapter: ToneAdapter
+    private let voiceProvider: VoiceProvider?
     private let logger = Logger(subsystem: "com.aminbenarieb.translatekeyboard", category: "pipeline")
 
-    public init(provider: TranslationProvider, toneAdapter: ToneAdapter) {
+    public init(
+        provider: TranslationProvider,
+        toneAdapter: ToneAdapter,
+        voiceProvider: VoiceProvider? = nil
+    ) {
         self.provider = provider
         self.toneAdapter = toneAdapter
+        self.voiceProvider = voiceProvider
     }
 
     public var providerIdentifier: String { provider.identifier }
     public var adapterIdentifier: String { toneAdapter.identifier }
+    public var voiceIdentifier: String? { voiceProvider?.identifier }
+
+    /// True when a voice-capable provider is wired in and reports available.
+    /// UI uses this to decide whether to render the mic button.
+    public func voiceAvailable() async -> Bool {
+        guard let voice = voiceProvider else { return false }
+        return await voice.isAvailable()
+    }
+
+    /// Convenience: transcribe audio and run the result through the rest of
+    /// the pipeline as a normal translate request. v1 always throws because
+    /// no concrete `VoiceProvider` reports `isAvailable()`.
+    public func processVoice(
+        _ audio: AudioBuffer,
+        from source: Language?,
+        to target: Language,
+        tone: Tone = .neutral
+    ) async throws -> TranslationResult {
+        guard let voice = voiceProvider, await voice.isAvailable() else {
+            throw TranslationError.providerUnavailable
+        }
+        let sourceLang = source ?? .english
+        let transcribed = try await voice.transcribe(audio: audio, language: sourceLang)
+        let request = TranslationRequest(
+            text: transcribed,
+            sourceLanguage: source,
+            targetLanguage: target,
+            tone: tone
+        )
+        return try await process(request)
+    }
 
     public func process(_ request: TranslationRequest) async throws -> TranslationResult {
         let trimmed = request.text.trimmingCharacters(in: .whitespacesAndNewlines)
@@ -69,6 +106,7 @@ public final class TranslationPipeline: Sendable {
     public func prewarm() async {
         await provider.prewarm()
         await toneAdapter.prewarm()
+        await voiceProvider?.prewarm()
     }
 
     /// True when the user is asking for "polish this text in tone X" rather

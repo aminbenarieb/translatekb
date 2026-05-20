@@ -4,6 +4,24 @@ All notable changes to TranslateKB. Format roughly follows [Keep a Changelog](ht
 
 ## [Unreleased]
 
+### Added — v0.2.0 work in progress
+- `VoiceProvider` protocol in `Shared/Sources/Voice/` for v2 voice translation.
+  Ships with `AppleSpeechVoiceProvider` stub and `MockVoiceProvider` for tests.
+  `TranslationPipeline` gains optional `voiceProvider:` init param and a
+  `processVoice(_:from:to:tone:)` convenience that runs transcribe →
+  translate → tone in one call. 6 new unit tests; total now 18 passing.
+- Localized App Store metadata for `ru-RU`, `kk`, and `tr-TR` —
+  subtitle, keywords, description, promotional text, whats_new, URLs.
+  Positioning targets the KZ/RU/TR diaspora corridor Apple's iOS 26 Live
+  Translation does not cover.
+- `Distribution/metadata/LOCALIZATION_NOTES.md` flagging which locales
+  need native-speaker review (kk, tr) before submission.
+- `docs/roadmap-v0.2.md` — full v0.2.0 enhancement brief covering five
+  tasks: analytics, Buy Me a Coffee, Settings CTAs, metadata reposition,
+  voice prep.
+- `ARCHITECTURE.md` — new "Voice input (v2)" section explaining the
+  pipeline integration, memory budget, and permission flow.
+
 ## [0.1.0] – 2026-05-19
 First TestFlight build.
 
