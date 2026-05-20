@@ -3,12 +3,12 @@ layout: default
 title: Privacy Policy
 ---
 
-# TranslateKB Privacy Policy
+# Yet Another Translate Keyboard Privacy Policy
 
 **Effective:** 2026-05-17
 **Contact:** amin.benarieb@gmail.com
 
-TranslateKB does not collect, store, or transmit any personal data.
+Yet Another Translate Keyboard does not collect, store, or transmit any personal data.
 
 ## What we don't do
 
@@ -28,11 +28,11 @@ None of this data leaves your iPhone.
 
 ## Network access
 
-The keyboard extension requires "Allow Full Access" in iOS Settings. This permission grants the extension the network entitlement so Apple's on-device Translation framework can download language packs as needed. Those downloads go directly from your iPhone to Apple's CDN — TranslateKB does not see them, proxy them, or transmit any content elsewhere.
+The keyboard extension requires "Allow Full Access" in iOS Settings. This permission grants the extension the network entitlement so Apple's on-device Translation framework can download language packs as needed. Those downloads go directly from your iPhone to Apple's CDN — Yet Another Translate Keyboard does not see them, proxy them, or transmit any content elsewhere.
 
 ## Children
 
-TranslateKB is not directed at children and does not knowingly collect data from anyone, including children under 13. There are no in-app purchases, ads, or tracking.
+Yet Another Translate Keyboard is not directed at children and does not knowingly collect data from anyone, including children under 13. There are no in-app purchases, ads, or tracking.
 
 ## Changes
 

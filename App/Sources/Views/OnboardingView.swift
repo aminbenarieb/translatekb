@@ -48,9 +48,9 @@ struct OnboardingView: View {
                 .font(.title).bold()
             VStack(alignment: .leading, spacing: 10) {
                 step("1.", "Open iOS Settings → General → Keyboard → Keyboards")
-                step("2.", "Tap “Add New Keyboard…” and pick TranslateKB")
-                step("3.", "Tap TranslateKB and turn on “Allow Full Access”")
-                step("4.", "Long-press 🌐 in any app to switch to TranslateKB")
+                step("2.", "Tap “Add New Keyboard…” and pick Yet Another Translate Keyboard")
+                step("3.", "Tap Yet Another Translate Keyboard and turn on “Allow Full Access”")
+                step("4.", "Long-press 🌐 in any app to switch to Yet Another Translate Keyboard")
             }
             .padding(.horizontal, 24)
             Spacer()

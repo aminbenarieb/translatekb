@@ -6,9 +6,9 @@ struct KeyboardSetupView: View {
             Section("Steps") {
                 stepRow("1", "Open iOS Settings", "Tap the button below — it deep-links to this app's settings.")
                 stepRow("2", "Keyboards → Keyboards", "Inside Settings, go to Keyboards and tap Keyboards again.")
-                stepRow("3", "Add New Keyboard…", "Pick TranslateKB from the list of third-party keyboards.")
-                stepRow("4", "Allow Full Access", "Tap TranslateKB in the list and enable Allow Full Access. The Translation framework needs network access for language packs.")
-                stepRow("5", "Switch in any app", "Long-press 🌐 in any text field to pick TranslateKB.")
+                stepRow("3", "Add New Keyboard…", "Pick Yet Another Translate Keyboard from the list of third-party keyboards.")
+                stepRow("4", "Allow Full Access", "Tap Yet Another Translate Keyboard in the list and enable Allow Full Access. The Translation framework needs network access for language packs.")
+                stepRow("5", "Switch in any app", "Long-press 🌐 in any text field to pick Yet Another Translate Keyboard.")
             }
             Section {
                 Button {

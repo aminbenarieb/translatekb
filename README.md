@@ -1,4 +1,4 @@
-# TranslateKB
+# Yet Another Translate Keyboard
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
 [![Swift](https://img.shields.io/badge/Swift-5.9-orange.svg)](https://swift.org)
@@ -75,19 +75,19 @@ xcodebuild \
   test CODE_SIGNING_ALLOWED=NO
 ```
 
-Ten tests covering `TranslationPipeline`, `MockTranslationProvider`,
-`UsageCounter`, and `AppGroupStorage` round-trip.
+18 tests covering `TranslationPipeline`, `MockTranslationProvider`,
+`UsageCounter`, `AppGroupStorage`, and `VoiceProvider`.
 
 ## Enabling the keyboard on device
 
 1. Build & install the app on your iPhone (iOS 17.4+, ideally iOS 18+).
-2. Open the **TranslateKB** app once so the keyboard extension is registered.
+2. Open the **Yet Another Translate Keyboard** app once so the keyboard extension is registered.
 3. iOS Settings → General → Keyboard → Keyboards → **Add New Keyboard…** →
-   TranslateKB.
-4. Tap TranslateKB in the list → enable **Allow Full Access**. (Required so
+   Yet Another Translate Keyboard.
+4. Tap Yet Another Translate Keyboard in the list → enable **Allow Full Access**. (Required so
    the keyboard can reach the Translation framework, which downloads
    language packs over the network.)
-5. In any app with a text field, long-press 🌐 to switch to TranslateKB.
+5. In any app with a text field, long-press 🌐 to switch to Yet Another Translate Keyboard.
 
 ## Architecture in one paragraph
 

@@ -3,7 +3,7 @@ layout: default
 title: Roadmap v0.2
 ---
 
-# TranslateKB v0.2.0 — Enhancement Brief
+# Yet Another Translate Keyboard v0.2.0 — Enhancement Brief
 
 > Status: drafted 2026-05-19. Source of truth for the next version. Each
 > task is independent and ships as a separate PR.
@@ -135,7 +135,7 @@ becomes IAP and Apple will reject.
 
 ### Placement
 1. **Settings footer** (always visible): "Made in Almaty by Amin. ☕ Buy me a coffee"
-2. **Post-onboarding screen** (one-time, after first successful translation): "TranslateKB is free forever. If you'd like to support, ☕"
+2. **Post-onboarding screen** (one-time, after first successful translation): "Yet Another Translate Keyboard is free forever. If you'd like to support, ☕"
 3. **Milestone banner** at 50/200/500 *inserted* translations.
 
 ### Rules
@@ -145,7 +145,7 @@ becomes IAP and Apple will reject.
 
 ### Copy
 - ❌ "Tip to unlock", "Premium support", "Help me keep developing"
-- ✅ "Buy me a coffee if TranslateKB helped you", "Made by one person in Almaty", "Free forever — tips welcome"
+- ✅ "Buy me a coffee if Yet Another Translate Keyboard helped you", "Made by one person in Almaty", "Free forever — tips welcome"
 
 ### Tracking
 `tip_cta_shown`, `tip_cta_tapped`, `tip_cta_dismissed`. Do **not** track
@@ -182,7 +182,7 @@ Renders title + tagline + "View on App Store" button. No marketing copy.
 
 ### Onboarding update
 After successful first translation:
-> "You just saved yourself a context-switch. TranslateKB is free forever and made by one person. If you ever want to support: ☕"
+> "You just saved yourself a context-switch. Yet Another Translate Keyboard is free forever and made by one person. If you ever want to support: ☕"
 
 Single dismissable button. Never shown again.
 
@@ -208,10 +208,10 @@ for the languages and apps Apple's native solution does not touch.
 but `kk` locale signals to Kazakh-speaking diaspora.) `de-DE` optional.
 
 ### Title (max ~30 chars)
-- en: `TranslateKB — Inline Translate Keyboard`
-- ru: `TranslateKB — Клавиатура-переводчик`
-- kk: `TranslateKB — Аударма пернетақтасы`
-- tr: `TranslateKB — Çeviri Klavyesi`
+- en: `Yet Another Translate Keyboard — Inline Translate Keyboard`
+- ru: `Yet Another Translate Keyboard — Клавиатура-переводчик`
+- kk: `Yet Another Translate Keyboard — Аударма пернетақтасы`
+- tr: `Yet Another Translate Keyboard — Çeviri Klavyesi`
 
 ### Subtitle (max 30 chars)
 - en: `Type, tap, translate inline`

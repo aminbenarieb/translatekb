@@ -1,7 +1,0 @@
-# Fastlane Appfile — used by all fastlane actions.
-# Set APPLE_ID via env or `~/.fastlane/.env` to avoid hard-coding it.
-
-app_identifier "com.aminbenarieb.translatekeyboard"
-apple_id ENV["APPLE_ID"]
-team_id "5P8935L6RT"
-itc_team_id ENV["ITC_TEAM_ID"]

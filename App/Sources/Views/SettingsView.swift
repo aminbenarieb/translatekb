@@ -59,7 +59,7 @@ struct SettingsView: View {
                     }
                 }
             }
-            .navigationTitle("TranslateKB")
+            .navigationTitle("Yet Another Translate Keyboard")
             .navigationDestination(isPresented: $showProviderTest) {
                 ProviderTestView()
             }

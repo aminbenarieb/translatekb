@@ -23,7 +23,7 @@ This metadata package covers four App Store locales:
 
 ### Turkish (tr-TR)
 - "Cihaz üstü çeviri" is the standard rendering of "on-device translation". A native Turkish iOS user would say it this way; verify against Apple's own Turkish localization for Translation.app.
-- Keyboard names in body text use the brand spelling "TranslateKB" — don't translate the product name itself.
+- Keyboard names in body text use the brand spelling "Yet Another Translate Keyboard" — don't translate the product name itself.
 
 ## Adding more locales
 

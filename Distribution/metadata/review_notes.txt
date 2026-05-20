@@ -1,4 +1,4 @@
-TranslateKB is a custom keyboard extension that translates the user's draft text in place using Apple's on-device Translation framework (iOS 18+).
+Yet Another Translate Keyboard is a custom keyboard extension that translates the user's draft text in place using Apple's on-device Translation framework (iOS 18+).
 
 WHY FULL ACCESS IS REQUIRED
 The Translation framework needs network access to download language packs on first use. iOS only grants network entitlements to keyboard extensions when the user enables "Allow Full Access". Without it, the Translation framework returns an error and the keyboard cannot translate.
@@ -11,16 +11,16 @@ WHAT THE KEYBOARD DOES NOT DO
 
 HOW TO REVIEW (English path)
 1. Install the app and open it once so the extension registers.
-2. iOS Settings → General → Keyboard → Keyboards → Add New Keyboard → TranslateKB.
-3. Tap TranslateKB in the list and enable "Allow Full Access".
+2. iOS Settings → General → Keyboard → Keyboards → Add New Keyboard → Yet Another Translate Keyboard.
+3. Tap Yet Another Translate Keyboard in the list and enable "Allow Full Access".
 4. Open Notes or Messages.
-5. Long-press 🌐 and switch to TranslateKB.
+5. Long-press 🌐 and switch to Yet Another Translate Keyboard.
 6. In the keyboard's top bar, confirm the source flag is "Auto" or pick one explicitly. Default target is English.
 7. Type "Hola, como estas" and tap the Translate button in the top bar.
 8. The text is replaced inline with the English translation.
 
 HOW TO REVIEW (Russian path — exercises the layout switching)
-1. With TranslateKB active in Notes, tap the source flag chip → pick Russian.
+1. With Yet Another Translate Keyboard active in Notes, tap the source flag chip → pick Russian.
 2. The keyboard switches to a Cyrillic ЙЦУКЕН layout.
 3. Type "Привет, как дела?" and tap Translate.
 4. The text is replaced with the English translation.

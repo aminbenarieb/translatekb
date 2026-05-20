@@ -63,7 +63,7 @@ let keyboardTarget = Target.target(
     bundleId: keyboardBundleId,
     deploymentTargets: deploymentTargets,
     infoPlist: .extendingDefault(with: [
-        "CFBundleDisplayName": "TranslateKB",
+        "CFBundleDisplayName": "Yet Another Translate Keyboard",
         "NSExtension": [
             "NSExtensionAttributes": [
                 "IsASCIICapable": false,
@@ -94,7 +94,7 @@ let appTarget = Target.target(
     bundleId: appBundleId,
     deploymentTargets: deploymentTargets,
     infoPlist: .extendingDefault(with: [
-        "CFBundleDisplayName": "TranslateKB",
+        "CFBundleDisplayName": "Yet Another Translate Keyboard",
         "LSApplicationCategoryType": "public.app-category.productivity",
         "UILaunchScreen": [
             "UIColorName": "",

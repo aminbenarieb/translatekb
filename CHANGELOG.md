@@ -1,6 +1,6 @@
 # Changelog
 
-All notable changes to TranslateKB. Format roughly follows [Keep a Changelog](https://keepachangelog.com/).
+All notable changes to Yet Another Translate Keyboard. Format roughly follows [Keep a Changelog](https://keepachangelog.com/).
 
 ## [Unreleased]
 
@@ -38,5 +38,4 @@ First TestFlight build.
 - Privacy manifests (`PrivacyInfo.xcprivacy`) in both targets — declares no tracking, no data collection.
 - 1024 app icon (Latin "A" + Cyrillic "Я" speech bubbles).
 - App Store assets: 1320×2868 screenshots, description, keywords, review notes.
-- Fastlane lanes for non-interactive ASC operations: `create_app`, `sync_metadata`, `sync_screenshots`, `beta`, `release`.
 - GitHub Actions CI runs the unit test suite on every push.

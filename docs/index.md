@@ -1,9 +1,9 @@
 ---
 layout: default
-title: TranslateKB
+title: Yet Another Translate Keyboard
 ---
 
-# TranslateKB
+# Yet Another Translate Keyboard
 
 A custom iOS keyboard that translates your draft in place with one tap.
 Type → tap → your message becomes English (or any of 16 languages) — without
